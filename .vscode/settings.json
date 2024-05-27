@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "stdio.h": "c",
+        "glm.hpp": "c",
+        "_fixes.hpp": "c",
+        "ebo.h": "c",
+        "texture.h": "c"
+    }
+}
