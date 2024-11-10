@@ -16,8 +16,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-//g++ main2.cpp glad.c stb_image.c VAO.c VBO.c EBO.c texture.c camera.cpp -o main2 -lglfw3 -lopengl32 -lgdi32
-
 char **get_file_contents(char *filename, int *length){
     FILE *fp = fopen(filename, "r");
     if (fp == NULL){
@@ -45,10 +43,12 @@ char **get_file_contents(char *filename, int *length){
  
     strings = (char**)malloc(*length * sizeof(char*)); 
 
-    char buffer2[100];
+    printf("sim\n");
+    char buffer2[1500];
 
     int i = 0;
-    while (fgets(buffer2, 100, fp)) {
+    while (fgets(buffer2, 1500, fp)) {
+        printf("%d %s\n", i, buffer2);
         strings[i] = (char*)malloc(strlen(buffer2) * sizeof(char));
         strcpy(strings[i], buffer2);
         //printf("index: %d string: %s\n", i, strings[i]);
